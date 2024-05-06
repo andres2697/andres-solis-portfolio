@@ -1,0 +1,77 @@
+[
+    { 
+      "title": "Desarrollo Front-End",
+      "abilities": {
+        "ability": [
+            { "name": "HTML5", "icon": "" },
+            { "name": "Responsive Design", "icon": "" },
+            { "name": "CSS3", "icon": "" },
+            { "name": "Tailwind", "icon": "" },
+            { "name": "Bootstrap", "icon": "" },
+            { "name": "Javascript", "icon": "" },
+            { "name": "JQuery", "icon": "" }
+        ]
+      }
+    },
+    {
+      "title": "Desarrollo Back-End",
+      "abilities": {
+        "ability": [
+            { "name": "Consumo de API's", "icon": ""},
+            { "name": "Firebase (Cloud functions, emulator)", "icon": ""},
+            { "name": "Python", "icon": ""},
+            { "name": "MySQL", "icon": ""},
+            { "name": "PostgreSQL", "icon": ""},
+            { "name": "PHP", "icon": ""}
+        ]
+      }
+    },
+    {
+      "title": "Frameworks",
+      "abilities": {
+        "ability": [
+            { "name": "Vue js 3 (Vite, Moti, Headless UI)", "icon": "" },
+            { "name": "Angular", "icon": "" },
+            { "name": "Laravel", "icon": "" },
+            { "name": "Expo (SDK 46)", "icon": "" }
+        ] 
+      }
+    },
+    {
+      "title": "Desarrollo Móvil",
+      "abilities": {
+        "ability": [
+            { "name": "React Native", "icon": ""},
+            { "name": "Flutter", "icon": ""}
+        ]
+      }
+    },
+    {
+      "title": "Repositorios",
+      "abilities": {
+        "ability": [
+            {"name": "Github", "icon": "" },
+            {"name": "Bitbucket", "icon": "" }
+        ]
+      }
+    },
+    {
+      "title": "Automatización de procesos",
+      "abilities": {
+        "ability": [
+            { "name": "Selenium", "icon": ""},
+            { "name": "Python con librería Pandas para lectura y generación de reportes automáticos en Excel", "icon": ""}
+        ]
+      }
+    },
+    {
+      "title": "Wordpress",
+      "abilities": {
+        "ability": [
+            { "name": "Implementación de E-comerce", "icon": "" },
+            { "name": "Administración del panel", "icon": "" },
+            { "name": "Creación de interfaces con el módulo de bloques", "icon": "" }
+        ]
+      }
+    }
+  ]

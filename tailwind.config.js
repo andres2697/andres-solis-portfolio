@@ -5,8 +5,14 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      transitionDuration: {
+        '2000': '2000ms',
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    require('preline/plugin'),
+  ],
 }
 
