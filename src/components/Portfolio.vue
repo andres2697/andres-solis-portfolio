@@ -1,6 +1,6 @@
 <script setup>
   import { ref, onMounted } from 'vue'
-
+  import "preline/preline";
   const carousel = ref([
     {
       title: 'José Andrés Solís Sotelo CV',

@@ -41,8 +41,8 @@
         >
           <font-awesome-icon icon="arrows-spin" class="transform translate ease-in duration-200" :class="spin ? 'rotate-90' : 'rotate-0'"></font-awesome-icon>
         </div>
-        <span class="text-white text-sm mt-2">Click on button</span>
-        <span class="text-white text-sm">and spin!</span>
+        <span class="text-white text-sm mt-2">Click en el botón</span>
+        <span class="text-white text-sm">y gira!</span>
       </div>
       <div
         v-for="(position, index) in positions"
