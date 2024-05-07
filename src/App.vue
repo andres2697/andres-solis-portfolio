@@ -1,19 +1,25 @@
 <script setup>
   import Abilities from './components/Abilities.vue'
   import AboutMe from './components/AboutMe.vue'
-  import Portfolio from './components/Portfolio.vue';
+  import Portfolio from './components/Portfolio.vue'
   import Welcome from './components/Welcome.vue'
   import { useStore } from './store/piniaStore.js'
+  import { ref, onMounted, onUnmounted } from 'vue'
   // Variables
   const store = useStore()
+  const welcomeRef = ref(null)
+  const aboutMeRef = ref(null)
+  const abilitiesRef = ref(null)
+  const portfolioRef = ref(null)
+
 </script>
 
 <template>
-  <div class="w-full h-fit overflow-x-hidden flex flex-col justify-center scroll-smooth">
-    <Welcome />
-    <AboutMe />
-    <Abilities />
-    <Portfolio></Portfolio>
+  <div class="relative w-full h-fit overflow-x-hidden flex flex-col justify-center scroll-smooth">
+    <Welcome ref="welcomeRef" id="welcome" />
+    <AboutMe ref="aboutMeRef" id="aboutMe" />
+    <Abilities ref="abilitiesRef" id="abilities" />
+    <Portfolio ref="portfolioRef" id="portfolio" />
   </div>
 </template>
 

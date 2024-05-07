@@ -115,7 +115,7 @@
                   :key="index"
                 >
                   <div class="flex justify-start h-full w-full px-14 py-10">
-                    <div class="w-[60%] flex flex-col justify-center">
+                    <div class="w-[65%] flex flex-col justify-center">
                       <h3 class="text-2xl text-black font-semibold transition duration-700 mb-3">{{object.title}}</h3>
                       <div class="flex flex-col px-3">
                         <span class="text-justify text-lg text-black mb-2">{{ object.description }}</span>
@@ -127,12 +127,12 @@
                             class="flex mx-2 font-semibold text-lg hover:cursor-pointer"
                           > {{ technology.name }}</span>
                         </div>
-                        <div class="w-auto h-10 ml-auto mr-auto text-sm bg-white border-[3px] border-black/50 p-2 rounded-md">Pasa el mouse sobre la <b>tecnología</b> y cambia el color del foco.</div>
+                        <div class="w-auto ml-auto mr-auto text-sm bg-white border-[3px] border-black/50 px-2 py-1 rounded-md">Pasa el mouse sobre la <b>tecnología</b> y cambia el color del foco.</div>
                         <span class="text-lg text-black font-semibold my-1">Repositorio:</span>
                         <a :href="object.repository" target="_blank" class="ml-2">{{ object.repository }}</a>
                       </div>
                     </div>
-                    <div class="flex flex-col relative w-[40%] justify-end items-center">
+                    <div class="flex flex-col relative w-[35%] justify-end items-center">
                       <font-awesome-icon icon="magnifying-glass-plus" @click="openModal(object.img)" class="flex sticky self-end top-0 left-0 z-10 text-xl hover:cursor-pointer hover:text-2xl transition-all duration-300 ease-in-out" />
                       <img :src="getImgUrl(object.img)" class="absolute w-full h-full object-contain">
                     </div>
