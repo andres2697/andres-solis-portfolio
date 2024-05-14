@@ -4,7 +4,7 @@
   import Portfolio from './components/Portfolio.vue'
   import Welcome from './components/Welcome.vue'
   import { useStore } from './store/piniaStore.js'
-  import { ref, onMounted, onUnmounted } from 'vue'
+  import { ref } from 'vue'
   // Variables
   const store = useStore()
   const welcomeRef = ref(null)

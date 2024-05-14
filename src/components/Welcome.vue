@@ -4,11 +4,18 @@
   // Variables
   const store = useStore()
   const screenWidth = ref(window.innerWidth)
+  const isSmallScreen = ref(false)
+
   // Functions
   const intervalo = setInterval(() => {
     const newCounter = store.welcomeCounter + 1
     store.setWelcomeCounter(newCounter)
     if (store.welcomeCounter === 8) {
+      isSmallScreen.value = window.innerWidth < 640; // Cambia a tu breakpoint de sm
+      // Ocultar la guía después de 1 segundo
+      setTimeout(() => {
+        isSmallScreen.value = false;
+      }, 2000);
       clearInterval(intervalo)
     }
   }, 1000)
@@ -60,6 +67,9 @@
 
 <template>
   <div class="w-full h-screen overflow-x-hidden">
+    <div v-if="isSmallScreen" class="absolute top-0 left-0 w-screen h-screen flex justify-start items-end bg-gray-900 bg-opacity-75 z-50">
+      <img src="../assets/SwipeGuide.gif" class="w-20 h-20 animate-fade-in ml-5 mb-2" />
+    </div>
     <div 
       class="w-full h-screen absolute flex flex-col justify-center items-center align-middle bg-gradient-to-r from-purple-600 via-purple-500 to-purple-400"
     >
@@ -148,5 +158,23 @@
 }
 .ultima-transicion {
   animation: last-transition 1s ease-out;
+}
+
+/* Animación de desvanecimiento */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Aplicar la animación a la imagen */
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
 }
 </style>
