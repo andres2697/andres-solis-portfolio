@@ -9,7 +9,8 @@
         { name: 'Vuejs 3', color: 'text-[#42b883]' }, { name: 'Vite', color: 'text-[#ffa800]' }, { name: 'HTML5', color: 'text-[#dd4b25]' }, { name: 'CSS3', color: 'text-[#254bdd]' }, { name: 'Javascript', color: 'text-[#e3c900]' }, { name: 'Tailwind', color: 'text-[#38bdf8]' }, { name: 'Google Geolocation API', color: 'text-[#32a350]' }
       ],
       img: "JoseAndresSolisSoteloCv.png",
-      repository: 'https://github.com/andres2697/Jose_Andres_Solis_Sotelo_CV'
+      repository: 'https://github.com/andres2697/Jose_Andres_Solis_Sotelo_CV',
+      repositoryName: 'Jose_Andres_Solis_Sotelo_CV'
     },
     {
       title: 'Problemas y Algoritmos',
@@ -18,7 +19,8 @@
         { name: 'Vuejs 3', color: 'text-[#42b883]' }, { name: 'Vite', color: 'text-[#ffa800]' }, { name: 'HTML5', color: 'text-[#dd4b25]' }, { name: 'CSS3', color: 'text-[#254bdd]' }, { name: 'Javascript', color: 'text-[#e3c900]' }, { name: 'Tailwind', color: 'text-[#38bdf8]' }
       ],
       img: "ProblemasYAlgoritmos.png",
-      repository: 'https://github.com/andres2697/Problemas_y_algoritmos'
+      repository: 'https://github.com/andres2697/Problemas_y_algoritmos',
+      repositoryName: 'Problemas_y_algoritmos'
     },
     {
       title: 'Bank List',
@@ -27,7 +29,8 @@
         { name: 'React Native Expo', color: 'text-[#555a64]' }, { name: 'Consumo de APIs con fetch', color: 'text-[#aa392b]' }
       ],
       img: "BankList.jpeg",
-      repository: 'https://github.com/andres2697/Bank_List'
+      repository: 'https://github.com/andres2697/Bank_List',
+      repositoryName: 'Bank_List'
     },
     {
       title: 'Mis gastos',
@@ -36,7 +39,8 @@
         { name: 'React Native Expo', color: 'text-[#555a64]' }, { name: 'Firebase', color: 'text-[#f79f0c]' }
       ],
       img: "MisGastos.jpeg",
-      repository: 'https://github.com/andres2697/registro-gastos-fraiche'
+      repository: 'https://github.com/andres2697/registro-gastos-fraiche',
+      repositoryName: 'registro-gastos-fraiche'
     }
   ])
   const showModal = ref(false)
@@ -64,7 +68,7 @@
   }
 </script>
 <template>
-  <div class="w-full h-screen flex flex-col justify-center items-center align-middle bg-gradient-to-r from-[#f05e23]/70 via-[#f05e23]/80 to-[#f05e23]/90">
+  <div class="w-full h-fit sm:h-screen flex flex-col justify-center items-center align-middle bg-gradient-to-r from-[#f05e23]/70 via-[#f05e23]/80 to-[#f05e23]/90">
     <div v-if="showModal" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-75 w-full h-full z-50">
       <div class="relative items-center flex flex-col justify-center rounded-lg shadow-lg w-[80%] h-[80%]">
         <button @click="closeModal" class="self-end mb-2 px-4 py-1 bg-blue-600 bg-opacity-75 text-white border-white border-2 font-bold text-lg rounded-lg">Cerrar</button>
@@ -77,12 +81,12 @@
       </div>
     </div>
     <div class="w-full h-[15%] flex flex-col justify-center items-center text-center p-5 rounded-md mt-5 z-30">
-      <h1 class="w-[60%] flex items-center justify-center py-2 text-black text-4xl font-bold bg-white bg-opacity-90 rounded-md shadow-md shadow-gray-700">
-        <font-awesome-icon icon="briefcase" class="mt-auto mb-auto mr-5 px-3 py-1 text-2xl font-semibold"/>
+      <h1 class="w-[60%] flex items-center justify-center py-2 text-black text-2xl sm:text-4xl font-bold bg-white bg-opacity-90 rounded-md shadow-md shadow-gray-700">
+        <font-awesome-icon icon="briefcase" class="mt-auto mb-auto mr-0 sm:mr-5 px-3 py-1 text-xl sm:text-2xl font-semibold"/>
         Proyectos
       </h1>
     </div>
-    <div class="relative w-full h-[100%] flex flex-col justify-center items-center">
+    <div class="relative w-full h-auto sm:h-[85%] flex flex-col justify-center items-center">
       <div class="absolute z-10 -top-28 left-0 -rotate-45 opacity-70">
         <svg width="450" height="450" id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 401.19 449.29">
           <g id="Capa_1-2" data-name="Capa 1">
@@ -105,36 +109,41 @@
           </g>
         </svg>
       </div>
-      <div class="w-full h-full flex justify-center items-center z-30">
-        <div class="w-[90%]">
+      <div class="w-full h-full flex justify-center items-center z-30 mb-10 sm:mb-0">
+        <div class="w-[95%] sm:w-[90%] h-screen sm:h-auto">
           <div data-hs-carousel='{ "loadingClasses": "opacity-0" }' class="relative">
-            <div class="hs-carousel relative overflow-hidden w-full min-h-96 max-h-full bg-white bg-opacity-75 rounded-lg">
+            <div class="hs-carousel relative overflow-hidden w-full min-h-screen sm:min-h-96 h-auto sm:h-full bg-white bg-opacity-75 rounded-lg">
               <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
                 <div class="hs-carousel-slide" 
                   v-for="(object, index) in carousel"
                   :key="index"
                 >
-                  <div class="flex justify-start h-full w-full px-14 py-10">
-                    <div class="w-[65%] flex flex-col justify-center">
-                      <h3 class="text-2xl text-black font-semibold transition duration-700 mb-3">{{object.title}}</h3>
+                  <div class="flex flex-col sm:flex-row justify-start h-full w-full px-7 sm:px-14 py-4 sm:py-10">
+                    <div class="w-full sm:w-[65%] flex flex-col justify-center">
+                      <h3 class="text-xl sm:text-2xl text-black font-semibold transition duration-700 mb-3">{{object.title}}</h3>
                       <div class="flex flex-col px-3">
-                        <span class="text-justify text-lg text-black mb-2">{{ object.description }}</span>
-                        <span class="text-lg text-black font-semibold mb-1">Tecnologías empleadas:</span>
-                        <div class="flex w-full mb-2">
+                        <span class="text-justify text-sm sm:text-lg text-black mb-2 font-medium sm:font-normal">{{ object.description }}</span>
+                        <span class="text-base sm:text-lg text-black font-semibold mb-1">Tecnologías empleadas:</span>
+                        <div class="flex flex-col sm:flex-row w-full mb-2 space-y-1 sm:space-y-0">
                           <span v-for="(technology, index) in object.technologies" :key="index"
                             :class="technology.color"
                             @mouseover="changeColor(technology.color)"
-                            class="flex mx-2 font-semibold text-lg hover:cursor-pointer"
+                            class="flex mx-2 font-semibold text-sm sm:text-lg hover:cursor-pointer"
                           > {{ technology.name }}</span>
                         </div>
-                        <div class="w-auto ml-auto mr-auto text-sm bg-white border-[3px] border-black/50 px-2 py-1 rounded-md">Pasa el mouse sobre la <b>tecnología</b> y cambia el color del foco.</div>
-                        <span class="text-lg text-black font-semibold my-1">Repositorio:</span>
-                        <a :href="object.repository" target="_blank" class="ml-2">{{ object.repository }}</a>
+                        <div class="w-auto ml-auto mr-auto text-[11px] sm:text-sm bg-white border-[3px] border-black/50 px-2 py-0.5 sm:py-1 rounded-md">Pasa el mouse sobre la <b>tecnología</b> y cambia el color del foco.</div>
+                        <span class="text-base sm:text-lg text-black font-semibold my-1">Repositorio:</span>
+                        <a :href="object.repository" target="_blank" class="whitespace-normal flex text-sm sm:text-base ml-2 w-[90%] text-blue-500">
+                          <span>{{ object.repositoryName }}</span>
+                        </a>
                       </div>
                     </div>
-                    <div class="flex flex-col relative w-[35%] justify-end items-center">
-                      <font-awesome-icon icon="magnifying-glass-plus" @click="openModal(object.img)" class="flex sticky self-end top-0 left-0 z-10 text-xl hover:cursor-pointer hover:text-2xl transition-all duration-300 ease-in-out" />
-                      <img :src="getImgUrl(object.img)" class="absolute w-full h-full object-contain">
+                    <div class="flex flex-row sm:flex-col relative w-full sm:w-[35%] justify-end items-center mt-5 sm:mt-0">
+                      <font-awesome-icon icon="magnifying-glass-plus" @click="openModal(object.img)" class="flex w-[5%] sm:w-auto sticky self-baseline sm:self-end top-0 left-0 ml-10 sm:ml-0 z-10 text-base sm:text-xl hover:cursor-pointer hover:text-lg hover:sm:text-2xl transition-all duration-300 ease-in-out" />
+                      <img :src="getImgUrl(object.img)" class="absolute w-full h-full object-contain hidden sm:flex">
+                      <div class="relative flex sm:hidden w-full h-14 overflow-hidden">
+                        <img :src="getImgUrl(object.img)" class="absolute w-full h-full object-contain">
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -158,7 +167,7 @@
               </span>
             </button>
 
-            <div class="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 space-x-2">
+            <div class="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 space-x-2 mt-10">
               <span
                 v-for="index in carousel.length"
                 :key="index"

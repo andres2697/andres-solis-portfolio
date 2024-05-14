@@ -77,34 +77,35 @@
 </script>
 
 <template>
-  <div class="w-full h-screen flex flex-col justify-between align-middle bg bg-gradient-to-l from-green-600 via-green-500 to-green-400">
-    <div class="w-full h-[15%] flex flex-col justify-center items-center text-center p-5 rounded-md mt-5">
-      <h1 class="w-[60%] flex items-center justify-center py-2 text-black text-4xl font-bold bg-white bg-opacity-90 rounded-md shadow-md shadow-green-600">
-        <font-awesome-icon icon="info" class="mt-auto mb-auto mr-5 px-3 py-1 rounded-full border-black border-4 text-2xl font-semibold"/>
+  <div class="w-full h-auto sm:h-screen flex flex-col justify-between align-middle bg bg-gradient-to-l from-green-600 via-green-500 to-green-400">
+    <div class="w-full h-32 sm:h-[15%] flex flex-col justify-center items-center text-center p-5 rounded-md mt-0 sm:mt-5">
+      <h1 class="w-[60%] flex items-center justify-center py-2 text-black text-2xl sm:text-4xl font-bold bg-white bg-opacity-90 rounded-md shadow-md shadow-green-600">
+        <font-awesome-icon icon="info" class="mt-auto mb-auto mr-5 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full border-black border-2 sm:border-4 text-lg sm:text-2xl font-semibold"/>
         A cerca de mi
       </h1>
     </div>
-    <div class="w-full h-[85%] flex justify-center items-center">
-      <div class="w-full h-[90%] flex mx-8">
-        <div class="w-[25%] flex flex-col justify-center text-center items-center ml-5 bg-white bg-opacity-90 rounded-lg shadow-lg shadow-green-600">
-          <div class="flex justify-center items-center rounded-[50%] w-52 h-52 overflow-hidden mb-6">
+    <div class="w-full h-auto sm:h-[85%] flex justify-center items-center">
+      <div class="w-full h-[90%] flex flex-col sm:flex-row mx-8">
+        <div class="w-full sm:w-[25%] flex flex-col justify-center text-center items-center mb-5 ml-0 sm:ml-5 sm:mb-0 bg-white bg-opacity-90 rounded-lg shadow-lg shadow-green-600">
+          <div class="flex justify-center items-center rounded-[50%] w-32 h-32 mt-4 sm:w-52 sm:h-52 sm:mt-0 overflow-hidden mb-2 sm:mb-6">
             <img class="w-full h-full object-cover" src="../assets/foto-perfil-linkedin.jpeg">
           </div>
-          <h3 class="text-black text-2xl font-semibold">José Andrés Solís Sotelo</h3>
-          <h3 class="text-black text-lg font-semibold">Ingeniero en Computación</h3>
+          <h3 class="text-black text-xl sm:text-2xl font-semibold">José Andrés Solís Sotelo</h3>
+          <h3 class="text-black text-base sm:text-lg font-semibold pb-2 sm:pb-0">Ingeniero en Computación</h3>
         </div>
-        <div class="w-[75%] ml-8 space-y-2 flex flex-col bg-white bg-opacity-90 rounded-lg shadow-lg shadow-green-600 px-10 py-8">
-          <p class="w-full text-justify text-lg translate -translate-x-5 opacity-0 duration-2000 ease-out"
+        <div class="w-full sm:w-[75%] mb-10 sm:mb-0  ml-0 sm:ml-8 space-y-2 flex flex-col bg-white bg-opacity-90 rounded-lg shadow-lg shadow-green-600 px-7 py-2 sm:px-10 sm:py-8">
+          <p class="w-full text-justify text-base sm:text-lg translate -translate-x-5 opacity-0 duration-2000 ease-out"
             :class="animatePar ? 'translate-x-0 opacity-100' : ''"
           >
-            <span ref="aboutMe" class="text-2xl font-bold mr-0.5">S</span><span>{{ aboutMePar1 }}</span>
+            <span ref="aboutMe" class="text-2xl font-bold mr-0.5">S</span>
+            <span>{{ aboutMePar1 }}</span>
           </p>
-          <p class="w-full text-justify text-lg translate translate-x-5 opacity-0 duration-2000 ease-out"
-            :class="animatePar ? '-translate-x-0 opacity-100' : ''"
+          <p class="w-full text-justify text-base sm:text-lg translate translate-x-5 opacity-0 duration-2000 ease-out"
+            :class="animatePar ? '-translate-x-px sm:-translate-x-0 opacity-100' : ''"
           >
             <span class="text-2xl font-bold mr-0.5">L</span><span>{{ aboutMePar2 }}</span>
           </p>
-          <p class="w-full text-justify text-lg translate -translate-x-5 opacity-0 duration-2000 ease-out"
+          <p class="w-full text-justify text-base sm:text-lg translate -translate-x-5 opacity-0 duration-2000 ease-out"
             :class="animatePar ? 'translate-x-0 opacity-100' : ''"
           >
             <span class="text-2xl font-bold mr-0.5">E</span><span>{{ aboutMePar3 }}</span>

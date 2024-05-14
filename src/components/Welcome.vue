@@ -3,6 +3,7 @@
   import { useStore } from '../store/piniaStore.js'
   // Variables
   const store = useStore()
+  const screenWidth = ref(window.innerWidth)
   // Functions
   const intervalo = setInterval(() => {
     const newCounter = store.welcomeCounter + 1
@@ -21,11 +22,10 @@
     const fullScreenH = window.innerHeight
     const fullScreenW = window.innerWidth
     let left = Math.random() * (fullScreenW - 280)
-
     let startRangeTop1 = 0;
-    let endRangeTop1 = 30;
-    let startRangeTop2 = 40;
-    let endRangeTop2 = 50;
+    let endRangeTop1 = screenWidth.value > 1000 ?  30 : 20;
+    let startRangeTop2 = screenWidth.value > 1000 ? 40 : 60;
+    let endRangeTop2 = screenWidth.value > 1000 ? 50 : 70;
     let randomNumber = Math.random();
 
     if (randomNumber < 0.5) {
@@ -49,8 +49,8 @@
   }
   // onMounted
   onMounted(async () => {
-    randomTop.value = window.innerHeight - 350
-    randomLeft.value = window.innerWidth - 350
+    randomTop.value = screenWidth.value > 1000 ? (window.innerHeight - 350) : (window.innerHeight - 160)
+    randomLeft.value = screenWidth.value > 1000 ? (window.innerWidth - 350) : (window.innerWidth - 150)
   })
   // onUnmounted
   onUnmounted(() => {
@@ -68,41 +68,41 @@
         @mouseover="moveRandom"
         :style="{ top: randomTop + 'px', left: randomLeft + 'px' }"          
       >
-        <img src="../assets/CoheteBlanco.svg" width="250" height="250" :style="rocketStyle">
+        <img src="../assets/CoheteBlanco.svg" :width="screenWidth > 1000 ? '250' : '100'" :height="screenWidth > 1000 ? '250' : '100'" :style="rocketStyle">
         <span class="animate-bounce mt-5 font-bold">Hover Me!</span>
       </div>
-      <div class="w-1/2 h-[40%] flex flex-col z-50 bg-white bg-opacity-95 rounded-lg p-5 justify-center text-center shadow-xl shadow-purple-800">
-          <h2 class="font-bold text-[40px] mb-3">Bienvenido a mi portafolio</h2>
+      <div class="w-2/3 sm:w-1/2 h-[40%] flex flex-col z-50 bg-white bg-opacity-95 rounded-lg p-5 justify-center text-center shadow-xl shadow-purple-800">
+          <h2 class="font-bold text-2xl mb-3 sm:text-[40px]">Bienvenido a mi portafolio</h2>
           <div class="relative flex mt-2">
               <div 
                 class="absolute inset-0 flex items-center justify-center transition duration-1000 ease-in-out opacity-0"
                 :class="store.welcomeCounter === 1 ? 'desplazar-desaparecer-transicion' : ''"
               >
-                  <h1 class="text-4xl font-bold text-purple-700 tracking-wide">Imagina</h1>
+                  <h1 class="text-2xl sm:text-4xl font-bold text-purple-700 tracking-wide">Imagina</h1>
               </div>
               <div
                 class="absolute inset-0 flex items-center justify-center transition duration-1000 ease-in-out opacity-0"
                 :class="store.welcomeCounter === 2 ? 'desplazar-desaparecer-transicion' : ''"
               >
-                  <h1 class="text-4xl font-bold text-purple-700 tracking-wide">Diseña</h1>
+                  <h1 class="text-2xl sm:text-4xl font-bold text-purple-700 tracking-wide">Diseña</h1>
               </div>
               <div
                 class="absolute inset-0 flex items-center justify-center transition duration-1000 ease-in-out opacity-0"
                 :class="store.welcomeCounter === 3 ? 'desplazar-desaparecer-transicion' : ''"
               >
-                  <h1 class="text-4xl font-bold text-purple-700 tracking-wide">Crea</h1>
+                  <h1 class="text-2xl sm:text-4xl font-bold text-purple-700 tracking-wide">Crea</h1>
               </div>
               <div
                 class="absolute inset-0 flex items-center justify-center transition duration-1000 ease-in-out"
                 :class="store.welcomeCounter >= 4 ? 'ultima-transicion opacity-100 translate-y-[10px]' : 'opacity-0'"
               >
-                  <h1 class="text-4xl font-bold text-purple-700 tracking-wide">Programa</h1>
+                  <h1 class="text-2xl sm:text-4xl font-bold text-purple-700 tracking-wide">Programa</h1>
               </div>
           </div>
           <div class="w-full h-10 flex justify-center items-center mt-10">
             <h2 
               class="font-semibold transition-all duration-1000"
-              :class="(store.welcomeCounter >= 6 && store.welcomeCounter % 2 === 0) ? 'text-[18px]': 'text-[20px]'"
+              :class="(store.welcomeCounter >= 6 && store.welcomeCounter % 2 === 0) ? 'sm:text-[18px] text-[15px]': 'sm:text-[20px] text-[17px]'"
             >
               ¡Atrapa al cohete!
             </h2>
