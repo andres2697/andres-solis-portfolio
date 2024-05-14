@@ -68,7 +68,7 @@
 <template>
   <div class="w-full h-screen overflow-x-hidden">
     <div v-if="isSmallScreen" class="absolute top-0 left-0 w-screen h-screen flex justify-start items-end bg-gray-900 bg-opacity-75 z-50">
-      <img src="../assets/SwipeGuide.gif" class="w-20 h-20 animate-fade-in ml-5 mb-2" />
+      <img src="../assets/SwipeGuide.gif" class="w-20 h-20 animate-fade-in ml-14 mb-20" />
     </div>
     <div 
       class="w-full h-screen absolute flex flex-col justify-center items-center align-middle bg-gradient-to-r from-purple-600 via-purple-500 to-purple-400"
