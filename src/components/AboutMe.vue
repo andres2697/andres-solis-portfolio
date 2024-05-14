@@ -101,7 +101,7 @@
             <span>{{ aboutMePar1 }}</span>
           </p>
           <p class="w-full text-justify text-base sm:text-lg translate translate-x-5 opacity-0 duration-2000 ease-out"
-            :class="animatePar ? '-translate-x-5 sm:-translate-x-0 opacity-100' : ''"
+            :class="animatePar ? '-translate-x-10 sm:-translate-x-0 opacity-100' : ''"
           >
             <span class="text-2xl font-bold mr-0.5">L</span><span>{{ aboutMePar2 }}</span>
           </p>
