@@ -86,7 +86,7 @@
         Proyectos
       </h1>
     </div>
-    <div class="relative w-full h-auto sm:h-[85%] flex flex-col justify-center items-center">
+    <div class="relative w-full h-auto sm:h-[85%] flex flex-col justify-center items-center mt-10 sm:mt-0">
       <div class="absolute z-10 -top-28 left-0 -rotate-45 opacity-70">
         <svg width="450" height="450" id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 401.19 449.29">
           <g id="Capa_1-2" data-name="Capa 1">
@@ -167,7 +167,7 @@
               </span>
             </button>
 
-            <div class="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 space-x-2 mt-10">
+            <div class="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 space-x-2 mt-2 sm:mt-10">
               <span
                 v-for="index in carousel.length"
                 :key="index"
