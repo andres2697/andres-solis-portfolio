@@ -110,7 +110,7 @@
         </svg>
       </div>
       <div class="w-full h-full flex justify-center items-center z-30 mb-10 sm:mb-0">
-        <div class="w-[94%] sm:w-[90%] h-screen sm:h-auto">
+        <div class="w-[92%] sm:w-[90%] h-screen sm:h-auto">
           <div data-hs-carousel='{ "loadingClasses": "opacity-0" }' class="relative">
             <div class="hs-carousel relative overflow-hidden w-full min-h-screen sm:min-h-96 h-auto sm:h-full bg-white bg-opacity-75 rounded-lg">
               <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
@@ -142,7 +142,7 @@
                       <font-awesome-icon icon="magnifying-glass-plus" @click="openModal(object.img)" class="flex w-[5%] sm:w-auto sticky self-baseline sm:self-end top-0 left-0 ml-10 sm:ml-0 z-10 text-base sm:text-xl hover:cursor-pointer hover:text-lg hover:sm:text-2xl transition-all duration-300 ease-in-out" />
                       <img :src="getImgUrl(object.img)" class="absolute w-full h-full object-contain hidden sm:flex">
                       <div class="relative flex sm:hidden w-full h-14 overflow-hidden">
-                        <img :src="getImgUrl(object.img)" class="absolute w-full h-full object-contain">
+                        <img :src="getImgUrl(object.img)" class="absolute w-[70%] h-[70%] object-contain">
                       </div>
                     </div>
                   </div>
