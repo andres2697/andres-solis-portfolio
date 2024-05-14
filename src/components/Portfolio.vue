@@ -110,7 +110,7 @@
         </svg>
       </div>
       <div class="w-full h-full flex justify-center items-center z-30 mb-10 sm:mb-0">
-        <div class="w-[95%] sm:w-[90%] h-screen sm:h-auto">
+        <div class="w-[94%] sm:w-[90%] h-screen sm:h-auto">
           <div data-hs-carousel='{ "loadingClasses": "opacity-0" }' class="relative">
             <div class="hs-carousel relative overflow-hidden w-full min-h-screen sm:min-h-96 h-auto sm:h-full bg-white bg-opacity-75 rounded-lg">
               <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
